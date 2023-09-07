@@ -10,6 +10,7 @@ public class MergedVoxelDisplay : MonoBehaviour
     public RosSubscriberExample Sub;
     [NonSerialized]
     public float x, y, z, rx, ry, rz;
+    bool once = true;
 
     GameObject kuby;
     // Start is called before the first frame update
@@ -37,8 +38,6 @@ public class MergedVoxelDisplay : MonoBehaviour
     public void FillIncoming(pc2 pointcloud)
     {
         Clean();
-        this.transform.position = new Vector3(x, y, z);
-        this.transform.rotation = Quaternion.Euler(rx, ry, rz);
         Vector3 cubePose;
         int j;
         for (int i = 0; i < pointcloud.width; i++)
@@ -51,6 +50,15 @@ public class MergedVoxelDisplay : MonoBehaviour
             kuby = Instantiate(cubz, cubePose, Quaternion.identity);
             kuby.transform.SetParent(this.gameObject.transform, false);
         }
+        //this.transform.rotation = Quaternion.Euler(rx, ry, rz);
+        //this.transform.position = new Vector3(x, y, z);
+        if (once)
+        {
+            this.transform.Rotate(new Vector3(rx, ry, rz), Space.Self);
+            this.transform.Translate(new Vector3(x, y, z), Space.Self);
+            once = false;
+        }
+        
     }
 
     public void Clean()

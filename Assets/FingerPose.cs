@@ -68,14 +68,22 @@ public class FingerPose : MonoBehaviour
 
     public void CubeAdder()
     {
-        _MinecraftBuilder.InstantiateEditor(InitialPose_incubes, FinalPose_incubes);
-        Destroy(Selector);
+        if (EditorActivator)
+        {
+            _MinecraftBuilder.InstantiateEditor(InitialPose_incubes, FinalPose_incubes);
+            Destroy(Selector);
+        }
+        
     }
 
     public void CubeRemover()
     {
-        _MinecraftBuilder.DestroyEditor(InitialPose_incubes, FinalPose_incubes);
-        Destroy(Selector);
+        if (EditorActivator)
+        {
+            _MinecraftBuilder.DestroyEditor(InitialPose_incubes, FinalPose_incubes);
+            Destroy(Selector);
+        }
+        
     }
 
     public void ActivateEditor()

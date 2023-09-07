@@ -85,4 +85,9 @@ public class MiniMap : MonoBehaviour
         }
     }
 
+    public void FillLocalUsingObjects(Vector3 pose)
+    {
+
+    }
+
 }

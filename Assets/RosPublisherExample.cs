@@ -28,7 +28,7 @@ public class RosPublisherExample : MonoBehaviour
 
     //Texture2D image; //For FSLAM. To be tried later
 
-    float publishMessageFrequency = 2f;
+    float publishMessageFrequency = 3f;
 
     // Used to determine how much time has elapsed since the last message was published
     float timeElapsed;

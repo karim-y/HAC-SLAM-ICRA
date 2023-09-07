@@ -16,7 +16,7 @@ public class MinecraftBuilder : MonoBehaviour
     [NonSerialized]
     public float cubesize;
     static int Hor_angle_window = 90; //90; //36
-    static int Ver_angle_window = 90;//46; //16
+    static int Ver_angle_window = 46;//46; //16
     static float angle_size = 2f;
     float Hor_angle_min = -((float)Hor_angle_window / 2);
     float Ver_angle_min = -((float)Ver_angle_window / 2);
@@ -67,13 +67,13 @@ public class MinecraftBuilder : MonoBehaviour
             }
         }
 
-        /*Taj1 = new GameObject[xSize][][];
+        /*Taj1 = new GameObject[xSize/2][][];
         for (int i = 0; i < xSize; i++)
         {
-            Taj1[i] = new GameObject[ySize][];
+            Taj1[i] = new GameObject[ySize/2][];
             for (int j = 0; j < ySize; j++)
             {
-                Taj1[i][j] = new GameObject[zSize];
+                Taj1[i][j] = new GameObject[zSize/2];
             }
         }*/
 
@@ -232,7 +232,6 @@ public class MinecraftBuilder : MonoBehaviour
             if (humanApproved)
             {
                 grid_arr[indexo] = 100;
-                //Debug.Log("Aywa");
             }
             if (grid_arr[indexo] < 1)
             {
@@ -252,8 +251,8 @@ public class MinecraftBuilder : MonoBehaviour
                 {
                     pub.AddPointCloudtoROSMessage(nearest_pt);
                 }*/
-
-            } 
+                //if(Taj1[distx_in_cubes/2])
+            }
         }
     }
 
@@ -283,9 +282,53 @@ public class MinecraftBuilder : MonoBehaviour
             }
         }
         pub.PublishEditedPointCloudMsg();
+        Debug.Log("Adder");
     }
 
-    public void DestroyEditor(Vector3Int MaxDist, Vector3Int RecentDist)
+    /*public void DestroyEditor(Vector3Int MaxDist, Vector3Int RecentDist)
+    {
+        int Startx = Mathf.Min(MaxDist.x, RecentDist.x);
+        int Starty = Mathf.Min(MaxDist.y, RecentDist.y);
+        int Startz = Mathf.Min(MaxDist.z, RecentDist.z);
+        int Endx = Mathf.Max(MaxDist.x, RecentDist.x);
+        int Endy = Mathf.Max(MaxDist.y, RecentDist.y);
+        int Endz = Mathf.Max(MaxDist.z, RecentDist.z);
+
+        *//*int Endxds = (Endx - Startx) * 2;
+        int Endyds = (Endy - Starty) * 2;
+        int Endzds = (Endz - Startz) * 2;*//*
+
+        for (int i = Startx; i <= Endxds; i++)
+        {
+            for (int j = Starty; j <= Endyds; j++)
+            {
+                for (int k = Startz; k <= Endzds; k++)
+                {
+                    pub.DeletedPointCloudPublisher(new Vector3(i, j, k) * 0.025f);
+                    *//*if(Taj[i - 1 + xSize / 2][j - 1 + ySize / 2][k - 1 + zSize / 2] != null)
+                    {
+                        pub.DeletedPointCloudPublisher(new Vector3(i, j, k) * cubesize);
+                    }*//*
+                    //Destroyer(new Vector3(i, j, k));
+                }
+            }
+        }
+        pub.PublishDeletedPointCloudMsg();
+    }*/
+
+    public void DisableMinecraft()
+    {
+        MappingSwitch = false;
+        Papa.SetActive(false);
+    }
+
+    public void EnableMinecraft()
+    {
+        MappingSwitch = true;
+        Papa.SetActive(true);
+    }
+
+    /*public void DestroyEditor(Vector3Int MaxDist, Vector3Int RecentDist)
     {
         int Startx = Mathf.Min(MaxDist.x, RecentDist.x);
         int Starty = Mathf.Min(MaxDist.y, RecentDist.y);
@@ -300,8 +343,8 @@ public class MinecraftBuilder : MonoBehaviour
             {
                 for (int k = Startz; k <= Endz; k++)
                 {
-
-                    if(Taj[i - 1 + xSize / 2][j - 1 + ySize / 2][k - 1 + zSize / 2] != null)
+                    pub.DeletedPointCloudPublisher(new Vector3(i, j, k) * cubesize);
+                    if (Taj[i - 1 + xSize / 2][j - 1 + ySize / 2][k - 1 + zSize / 2] != null)
                     {
                         pub.DeletedPointCloudPublisher(new Vector3(i, j, k) * cubesize);
                     }
@@ -310,18 +353,78 @@ public class MinecraftBuilder : MonoBehaviour
             }
         }
         pub.PublishDeletedPointCloudMsg();
-    }
+    }*/
 
-    public void DisableMinecraft()
+
+
+    public void DestroyEditor(Vector3Int MaxDist, Vector3Int RecentDist)
     {
-        MappingSwitch = false;
-        Papa.SetActive(false);
+
+        //MaxDist = new Vector3Int(1, 1, 1);
+        //RecentDist = new Vector3Int(2, 3, 4);
+
+        int Startx = Mathf.Min(MaxDist.x, RecentDist.x);
+        int Starty = Mathf.Min(MaxDist.y, RecentDist.y);
+        int Startz = Mathf.Min(MaxDist.z, RecentDist.z);
+        int Endx = Mathf.Max(MaxDist.x, RecentDist.x);
+        int Endy = Mathf.Max(MaxDist.y, RecentDist.y);
+        int Endz = Mathf.Max(MaxDist.z, RecentDist.z);
+        int Diffx = Endx - Startx;
+        int Diffy = Endy - Starty;
+        int Diffz = Endz - Startz;
+
+        for (int i = 0; i <= Diffx; i++)
+        {
+            for (int j = 0; j <= Diffy; j++)
+            {
+                for (int k = 0; k <= Diffz; k++)
+                {
+                    pub.DeletedPointCloudPublisher(new Vector3(i, j, k) * 0.049f + new Vector3(Startx, Starty, Startz) * cubesize);
+                    /*if (Taj[i - 1 + xSize / 2][j - 1 + ySize / 2][k - 1 + zSize / 2] != null)
+                    {
+                        pub.DeletedPointCloudPublisher(new Vector3(i, j, k) * cubesize);
+                    }*/
+                    Destroyer(new Vector3(i, j, k) + new Vector3(Startx, Starty, Startz));   ////uncomment
+                }
+            }
+        }
+        pub.PublishDeletedPointCloudMsg();
     }
 
-    public void EnableMinecraft()
+
+
+    ////////This is plan b.
+    /*public void DestroyEditor(Vector3Int MaxDist, Vector3Int RecentDist)
     {
-        MappingSwitch = true;
-        Papa.SetActive(true);
-    }
+        //MaxDist = new Vector3Int(1, 1, 1);
+        //RecentDist = new Vector3Int(2, 3, 4);
 
+        int Startx = Mathf.Min(MaxDist.x, RecentDist.x);
+        int Starty = Mathf.Min(MaxDist.y, RecentDist.y);
+        int Startz = Mathf.Min(MaxDist.z, RecentDist.z);
+        int Endx = Mathf.Max(MaxDist.x, RecentDist.x);
+        int Endy = Mathf.Max(MaxDist.y, RecentDist.y);
+        int Endz = Mathf.Max(MaxDist.z, RecentDist.z);
+        int Diffx = Endx - Startx;
+        int Diffy = Endy - Starty;
+        int Diffz = Endz - Startz;
+
+        for (int i = 0; i <= Diffx * 2; i++)
+        {
+            for (int j = 0; j <= Diffy * 2; j++)
+            {
+                for (int k = 0; k <= Diffz * 2; k++)
+                {
+                    pub.DeletedPointCloudPublisher(new Vector3(i, j, k) * cubesize);
+                    Debug.Log(new Vector3(i, j, k) * 0.025f + new Vector3(Startx,Starty,Startz));
+                    *//*if (Taj[i - 1 + xSize / 2][j - 1 + ySize / 2][k - 1 + zSize / 2] != null)
+                    {
+                        pub.DeletedPointCloudPublisher(new Vector3(i, j, k) * cubesize);
+                    }
+                    Destroyer(new Vector3(i, j, k));*//*
+                }
+            }
+        }
+        pub.PublishDeletedPointCloudMsg();
+    }*/
 }
