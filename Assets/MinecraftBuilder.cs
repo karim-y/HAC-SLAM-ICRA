@@ -67,13 +67,13 @@ public class MinecraftBuilder : MonoBehaviour
             }
         }
 
-        /*Taj1 = new GameObject[xSize/2][][];
-        for (int i = 0; i < xSize; i++)
+        /*Taj1 = new GameObject[xSize / 2][][];
+        for (int i = 0; i < xSize / 2; i++)
         {
-            Taj1[i] = new GameObject[ySize/2][];
-            for (int j = 0; j < ySize; j++)
+            Taj1[i] = new GameObject[ySize / 2][];
+            for (int j = 0; j < ySize / 2; j++)
             {
-                Taj1[i][j] = new GameObject[zSize/2];
+                Taj1[i][j] = new GameObject[zSize / 2];
             }
         }*/
 

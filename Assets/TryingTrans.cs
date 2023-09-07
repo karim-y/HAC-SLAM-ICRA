@@ -12,7 +12,7 @@ public class TryingTrans : MonoBehaviour
         this.transform.Translate(new Vector3(0, 0, 5), Space.Self);
         //this.transform.position = new Vector3(0, 0, 5);
         //this.transform.TransformDirection =
-        Debug.Log(x * 0.5);
+        //Debug.Log(Mathf.FloorToInt(x * 0.5f));
     }
 
     // Update is called once per frame
