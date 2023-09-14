@@ -47,6 +47,7 @@ public class RosSubscriberExample : MonoBehaviour
     public void pointCloudLive(pc2m ptcldlive)
     {
         incomingPointCloudLive = ptcldlive;
+        Debug.Log("Ejit");
     }
     public void twistReceived(twist Twisty)
     {
@@ -73,14 +74,7 @@ public class RosSubscriberExample : MonoBehaviour
         z = -1 * Twisty.linear.y;
         rx = 0; //1 * Twisty.angular.x * Mathf.Rad2Deg;
         ry = 1 * Twisty.angular.z * Mathf.Rad2Deg;
-        rz = 0; //1 * Twisty.angular.y * Mathf.Rad2Deg; //was -1
-        
-        Debug.Log(x);
-        Debug.Log(y);
-        Debug.Log(z);
-        Debug.Log(rx);
-        Debug.Log(ry);
-        Debug.Log(rz);
+        rz = 0; // 1 * Twisty.angular.y * Mathf.Rad2Deg; //was -1
 
     }
 }

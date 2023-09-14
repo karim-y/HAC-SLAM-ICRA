@@ -3361,7 +3361,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -3376,7 +3376,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5
+  far clip plane: 20
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -3680,7 +3680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acef0b79454c9b4dae3f8139bc4ba77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RosIPAddress: 192.168.1.103
+  m_RosIPAddress: 192.168.90.106
   m_RosPort: 10000
   m_ConnectOnStart: 1
   m_KeepaliveTime: 1
@@ -5901,6 +5901,7 @@ MonoBehaviour:
   box: {fileID: 1796931278}
   cubz: {fileID: 3855142852996578538, guid: db39469e9190f6e45a0e8f304feaf3fa, type: 3}
   pub: {fileID: 22085819}
+  HL: {fileID: 496043861}
 --- !u!65 &1796931278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13846,6 +13847,42 @@ MonoBehaviour:
       - m_Target: {fileID: 13472475}
         m_TargetAssemblyTypeName: MinecraftBuilder, Assembly-CSharp
         m_MethodName: EnableMinecraft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1796931277}
+        m_TargetAssemblyTypeName: MiniMap, Assembly-CSharp
+        m_MethodName: Clean
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 833209617}
+        m_TargetAssemblyTypeName: MiniMapIncoming, Assembly-CSharp
+        m_MethodName: Clean
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1796931277}
+        m_TargetAssemblyTypeName: MiniMap, Assembly-CSharp
+        m_MethodName: CleanHLMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

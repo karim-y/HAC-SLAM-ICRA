@@ -15,6 +15,7 @@ public class MiniMap : MonoBehaviour
     GameObject kuby;
     public GameObject cubz;
     public RosPublisherExample pub;
+    public GameObject HL;
     void Start()
     {
         numberOfChildren = 0;
@@ -65,6 +66,17 @@ public class MiniMap : MonoBehaviour
         }
     }
 
+    public void CleanHLMap()
+    {
+        if (HL.gameObject.transform.childCount > 1)
+        {
+            for (int i = 0; i < HL.gameObject.transform.childCount - 1; i++)
+            {
+                Destroy(HL.gameObject.transform.GetChild(i).gameObject);
+            }
+        }
+    }
+
     public void FillLocal(pc2 pointcloud)
     {
 
@@ -85,9 +97,9 @@ public class MiniMap : MonoBehaviour
         }
     }
 
-    public void FillLocalUsingObjects(Vector3 pose)
+    /*public void FillLocalUsingObjects(Vector3 pose)
     {
 
-    }
+    }*/
 
 }
