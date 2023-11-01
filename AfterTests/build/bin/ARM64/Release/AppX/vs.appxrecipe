@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MEC000095679P</Machine>
+    <WindowsUser>mhy16</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Release|ARM64</SolutionConfiguration>
+    <PackageArchitecture>arm64</PackageArchitecture>
+    <PackageIdentityName>5d836af7-5f8d-49e4-a503-12d9e18a7cc9</PackageIdentityName>
+    <PackageIdentityPublisher>CN=DefaultCompany</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\HAC-SLAM\AfterTests\build\obj\HAC-SLAM-2\ARM64\Release\</IntermediateOutputPath>
+    <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\AppX</LayoutDir>
+    <RegisteredManifestChecksum>EF8021B55F91B8A69FC1F87C05859C3734559458633AA9745CFC1C8BD52D28BE</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>HACSLAM2_1.0.0.0_arm64__pzq3xp76mxafg</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>HACSLAM2_pzq3xp76mxafg!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>HACSLAM2</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=DefaultCompany</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2023-10-19T06:37:44.950</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\HAC-SLAM-2.exe">
+      <PackagePath>HAC-SLAM-2.exe</PackagePath>
+      <Modified>2023-10-19T06:37:43.685</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\il2cpp\ARM64\Release\UnityPlayer.winmd">
+      <PackagePath>UnityPlayer.winmd</PackagePath>
+      <Modified>2022-04-08T08:06:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\il2cpp\ARM64\Release\UnityPlayer.dll">
+      <PackagePath>UnityPlayer.dll</PackagePath>
+      <Modified>2022-04-08T08:06:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\HAC_SLAM_2.winmd">
+      <PackagePath>HAC_SLAM_2.winmd</PackagePath>
+      <Modified>2023-10-15T16:13:35.727</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-08T07:22:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-08T07:22:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-08T07:22:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-08T07:22:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-08T07:22:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-08T07:22:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-08T07:22:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\StoreManifest.xml">
+      <PackagePath>StoreManifest.xml</PackagePath>
+      <Modified>2023-10-19T06:35:38.811</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\StreamingAssets\Vuforia\Hiro.xml">
+      <PackagePath>Data\StreamingAssets\Vuforia\Hiro.xml</PackagePath>
+      <Modified>2023-06-08T19:05:29.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\boot.config">
+      <PackagePath>Data\boot.config</PackagePath>
+      <Modified>2023-10-19T06:35:31.648</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\globalgamemanagers">
+      <PackagePath>Data\globalgamemanagers</PackagePath>
+      <Modified>2023-10-19T06:35:26.023</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\level0">
+      <PackagePath>Data\level0</PackagePath>
+      <Modified>2023-10-19T06:35:22.475</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\Resources\unity default resources">
+      <PackagePath>Data\Resources\unity default resources</PackagePath>
+      <Modified>2022-04-08T07:22:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\Resources\unity_builtin_extra">
+      <PackagePath>Data\Resources\unity_builtin_extra</PackagePath>
+      <Modified>2023-10-19T06:35:31.637</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\globalgamemanagers.assets">
+      <PackagePath>Data\globalgamemanagers.assets</PackagePath>
+      <Modified>2023-10-19T06:35:26.165</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\resources.assets">
+      <PackagePath>Data\resources.assets</PackagePath>
+      <Modified>2023-10-19T06:35:26.228</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\sharedassets0.assets">
+      <PackagePath>Data\sharedassets0.assets</PackagePath>
+      <Modified>2023-10-19T06:35:30.776</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\level0.resS">
+      <PackagePath>Data\level0.resS</PackagePath>
+      <Modified>2023-10-19T06:35:22.467</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\resources.assets.resS">
+      <PackagePath>Data\resources.assets.resS</PackagePath>
+      <Modified>2023-10-19T06:35:26.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\sharedassets0.assets.resS">
+      <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
+      <Modified>2023-10-19T06:35:30.724</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\nativePlugins.txt">
+      <PackagePath>Data\nativePlugins.txt</PackagePath>
+      <Modified>2023-10-19T06:36:28.531</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\RuntimeInitializeOnLoads.json">
+      <PackagePath>Data\RuntimeInitializeOnLoads.json</PackagePath>
+      <Modified>2023-10-19T06:35:20.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\ScriptingAssemblies.json">
+      <PackagePath>Data\ScriptingAssemblies.json</PackagePath>
+      <Modified>2023-10-19T06:35:25.819</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\UnitySubsystems\MicrosoftOpenXRPlugin\UnitySubsystemsManifest.json">
+      <PackagePath>Data\UnitySubsystems\MicrosoftOpenXRPlugin\UnitySubsystemsManifest.json</PackagePath>
+      <Modified>2023-03-15T21:52:39.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\UnitySubsystems\UnityOpenXR\UnitySubsystemsManifest.json">
+      <PackagePath>Data\UnitySubsystems\UnityOpenXR\UnitySubsystemsManifest.json</PackagePath>
+      <Modified>2023-03-07T12:14:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\sharedassets0.resource">
+      <PackagePath>Data\sharedassets0.resource</PackagePath>
+      <Modified>2023-10-19T06:35:30.678</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\il2cpp_data\Metadata\global-metadata.dat">
+      <PackagePath>Data\il2cpp_data\Metadata\global-metadata.dat</PackagePath>
+      <Modified>2023-10-19T06:36:03.330</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\il2cpp_data\Resources\I18N.CJK.dll-resources.dat">
+      <PackagePath>Data\il2cpp_data\Resources\I18N.CJK.dll-resources.dat</PackagePath>
+      <Modified>2023-10-19T06:35:56.309</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\il2cpp_data\Resources\mscorlib.dll-resources.dat">
+      <PackagePath>Data\il2cpp_data\Resources\mscorlib.dll-resources.dat</PackagePath>
+      <Modified>2023-10-19T06:35:56.302</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\StreamingAssets\Vuforia\Hiro.dat">
+      <PackagePath>Data\StreamingAssets\Vuforia\Hiro.dat</PackagePath>
+      <Modified>2023-06-08T19:05:29.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\UnityOpenXR.dll">
+      <PackagePath>UnityOpenXR.dll</PackagePath>
+      <Modified>2023-03-07T12:14:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\openxr_loader.dll">
+      <PackagePath>openxr_loader.dll</PackagePath>
+      <Modified>2023-03-07T12:14:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\MicrosoftOpenXRPlugin.dll">
+      <PackagePath>MicrosoftOpenXRPlugin.dll</PackagePath>
+      <Modified>2023-03-15T21:52:39.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\GameAssembly.dll">
+      <PackagePath>GameAssembly.dll</PackagePath>
+      <Modified>2023-10-19T06:37:36.254</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\il2cpp\ARM64\Release\baselib.dll">
+      <PackagePath>baselib.dll</PackagePath>
+      <Modified>2022-04-08T08:06:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2023-10-19T06:37:44.673</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\ARM\Microsoft.VCLibs.ARM.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\ARM64\Microsoft.VCLibs.ARM64.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\x64\Microsoft.VCLibs.x64.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.30035.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\x86\Microsoft.VCLibs.x86.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

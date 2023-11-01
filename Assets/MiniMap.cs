@@ -15,6 +15,7 @@ public class MiniMap : MonoBehaviour
     GameObject kuby;
     public GameObject cubz;
     public RosPublisherExample pub;
+    public RosSubscriberExample sub;
     public GameObject HL;
     void Start()
     {
@@ -51,8 +52,8 @@ public class MiniMap : MonoBehaviour
     public void ShowLocalMap()
     {
         Clean();
-        
-        FillLocal(pub.pc2m);
+        FillLocal(sub.localPointCloudDownSampled);
+        //FillLocal(pub.pc2m);
 
     }
     public void Clean()

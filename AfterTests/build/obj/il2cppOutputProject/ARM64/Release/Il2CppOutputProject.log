@@ -1,0 +1,32 @@
+﻿  Building GameAssembly.dll with MsvcWinRtToolChain
+  	Msvc Install Version: 16.0
+  	Msvc Install SDK Directory: C:\Program Files (x86)\Windows Kits\10
+  	Msvc Linker Path: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\ARM64\link.exe
+  	Msvc Compiler Path: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\ARM64\cl.exe
+  
+  	Output directory: D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release
+  	Cache directory: D:\HAC-SLAM\AfterTests\build\obj\il2cppOutputProject\ARM64\Release
+  Il2CppCCFieldValuesTable.cpp
+  Il2CppCCalculateFieldValues2.cpp
+  Il2CppCCalculateTypeValues1.cpp
+  Assembly-CSharp.cpp
+D:\HAC-SLAM\AfterTests\Il2CppOutputProject\IL2CPP\libil2cpp\codegen\il2cpp-codegen-common-small.h(34): warning C4305: 'return': truncation from '__int64' to 'T'
+          with
+          [
+              T=int32_t
+          ]
+  D:\HAC-SLAM\AfterTests\Il2CppOutputProject\Source\il2cppOutput\Assembly-CSharp.cpp(8509): note: see reference to function template instantiation 'T il2cpp_codegen_cast_double_to_int<int32_t>(double)' being compiled
+          with
+          [
+              T=int32_t
+          ]
+D:\HAC-SLAM\AfterTests\Il2CppOutputProject\IL2CPP\libil2cpp\codegen\il2cpp-codegen-common-small.h(34): warning C4309: 'return': truncation of constant value
+  ObjectFiles: 645 of which compiled: 4
+  	Time Compile: 1588 milliseconds Assembly-CSharp.cpp
+  	Time Compile: 925 milliseconds Il2CppCCalculateTypeValues1.cpp
+  	Time Compile: 888 milliseconds Il2CppCCalculateFieldValues2.cpp
+  	Time Compile: 870 milliseconds Il2CppCCFieldValuesTable.cpp
+  Total compilation time: 2247 milliseconds.
+  Creating library D:\HAC-SLAM\AfterTests\build\obj\il2cppOutputProject\ARM64\Release\linkresult_5E419A3B9BE2494FA3FAF371E4929FEB\GameAssembly.lib and object D:\HAC-SLAM\AfterTests\build\obj\il2cppOutputProject\ARM64\Release\linkresult_5E419A3B9BE2494FA3FAF371E4929FEB\GameAssembly.exp
+  Total link time: 23271 milliseconds.
+  Cleaned up 6 object files.

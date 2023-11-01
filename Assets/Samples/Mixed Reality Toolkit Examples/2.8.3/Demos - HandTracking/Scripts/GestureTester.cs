@@ -67,6 +67,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples
         [SerializeField]
         private MixedRealityInputAction tapAction = MixedRealityInputAction.None;
 
+        public GameObject cubzi;
         private void OnEnable()
         {
             HideRails();
@@ -74,7 +75,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples
 
         public void OnGestureStarted(InputEventData eventData)
         {
-            Debug.Log($"OnGestureStarted [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
+            //Debug.Log($"OnGestureStarted [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
 
             MixedRealityInputAction action = eventData.MixedRealityInputAction;
             if (action == holdAction)
@@ -84,6 +85,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples
             else if (action == manipulationAction)
             {
                 SetIndicator(manipulationIndicator, $"Manipulation: started {Vector3.zero}", manipulationMaterial, Vector3.zero);
+                cubzi.SetActive(true);
             }
             else if (action == navigationAction)
             {
@@ -96,7 +98,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples
 
         public void OnGestureUpdated(InputEventData eventData)
         {
-            Debug.Log($"OnGestureUpdated [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
+            //Debug.Log($"OnGestureUpdated [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
 
             MixedRealityInputAction action = eventData.MixedRealityInputAction;
             if (action == holdAction)
@@ -107,23 +109,26 @@ namespace Microsoft.MixedReality.Toolkit.Examples
 
         public void OnGestureUpdated(InputEventData<Vector3> eventData)
         {
-            Debug.Log($"OnGestureUpdated [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
+            //Debug.Log($"OnGestureUpdated [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
 
             MixedRealityInputAction action = eventData.MixedRealityInputAction;
             if (action == manipulationAction)
             {
                 SetIndicator(manipulationIndicator, $"Manipulation: updated {eventData.InputData}", manipulationMaterial, eventData.InputData);
+                cubzi.transform.position = eventData.InputData;
+                Debug.Log(eventData.InputData);
             }
             else if (action == navigationAction)
             {
                 SetIndicator(navigationIndicator, $"Navigation: updated {eventData.InputData}", navigationMaterial, eventData.InputData);
                 ShowRails(eventData.InputData);
+
             }
         }
 
         public void OnGestureCompleted(InputEventData eventData)
         {
-            Debug.Log($"OnGestureCompleted [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
+            //Debug.Log($"OnGestureCompleted [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
 
             MixedRealityInputAction action = eventData.MixedRealityInputAction;
             if (action == holdAction)
@@ -138,12 +143,13 @@ namespace Microsoft.MixedReality.Toolkit.Examples
 
         public void OnGestureCompleted(InputEventData<Vector3> eventData)
         {
-            Debug.Log($"OnGestureCompleted [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
+            //Debug.Log($"OnGestureCompleted [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
 
             MixedRealityInputAction action = eventData.MixedRealityInputAction;
             if (action == manipulationAction)
             {
                 SetIndicator(manipulationIndicator, $"Manipulation: completed {eventData.InputData}", defaultMaterial, eventData.InputData);
+                cubzi.SetActive(false);
             }
             else if (action == navigationAction)
             {
@@ -154,7 +160,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples
 
         public void OnGestureCanceled(InputEventData eventData)
         {
-            Debug.Log($"OnGestureCanceled [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
+            //Debug.Log($"OnGestureCanceled [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
 
             MixedRealityInputAction action = eventData.MixedRealityInputAction;
             if (action == holdAction)

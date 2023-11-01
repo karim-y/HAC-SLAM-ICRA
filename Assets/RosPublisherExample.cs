@@ -6,6 +6,7 @@ using OGM = RosMessageTypes.Nav; //new
 using pics = RosMessageTypes.Sensor; //ktir new (nicolas)
 using octom = RosMessageTypes.Octomap; //ktir new (3D)
 using pc2 = RosMessageTypes.Sensor;
+using transformer = RosMessageTypes.Mhy16;
 using System.Runtime.InteropServices;
 using System;
 
@@ -25,6 +26,7 @@ public class RosPublisherExample : MonoBehaviour
     string topicName5 = "/point_cloud"; //For publishing point clouds
     string topicName6 = "/human_edits"; //For publishing edits
     string topicName7 = "/deleted"; //For publishing deleted
+    string topicName8 = "/Transformation"; //For ID and twist
 
     //Texture2D image; //For FSLAM. To be tried later
 
@@ -41,6 +43,8 @@ public class RosPublisherExample : MonoBehaviour
     pc2.PointCloud2Msg pc2e;
     pc2.PointCloud2Msg pc2d;
     GeometryMsgs.TwistMsg twist;
+    transformer.TransformationMsg newTwist;
+
     uint NewWidth = 0;
     uint NewWidthforEdited = 0;
     uint NewWidthforDeleted = 0;
@@ -58,6 +62,7 @@ public class RosPublisherExample : MonoBehaviour
         ros.RegisterPublisher<pc2.PointCloud2Msg>(topicName5);
         ros.RegisterPublisher<pc2.PointCloud2Msg>(topicName6);
         ros.RegisterPublisher<pc2.PointCloud2Msg>(topicName7);
+        ros.RegisterPublisher<transformer.TransformationMsg>(topicName8);
 
         //The below is for the robot rotation 
         PublishTwist = false;
@@ -237,6 +242,16 @@ public class RosPublisherExample : MonoBehaviour
     
     public void EducatedGuessForICP()
     {
+        newTwist.idfrom = 2;
+        newTwist.idto = 1;
+        newTwist.tf.linear.x = -1 * (global.transform.position.x - local.transform.position.x) / global.transform.localScale.x;
+        newTwist.tf.linear.y = -1 * (global.transform.position.z - local.transform.position.z) / global.transform.localScale.z;
+        newTwist.tf.linear.z = -1 * (global.transform.position.y - local.transform.position.y) / global.transform.localScale.y;
+        newTwist.tf.angular.x = (global.transform.rotation.eulerAngles.z - local.transform.rotation.eulerAngles.z) * Mathf.Deg2Rad;
+        newTwist.tf.angular.y = (local.transform.rotation.eulerAngles.x - global.transform.rotation.eulerAngles.x) * Mathf.Deg2Rad;
+        newTwist.tf.angular.z = (global.transform.rotation.eulerAngles.y - local.transform.rotation.eulerAngles.y) * Mathf.Deg2Rad;
+
+        
         twist.linear.x = -1 * (global.transform.position.x - local.transform.position.x) / global.transform.localScale.x; //(global.transform.position.z - local.transform.position.z) / global.transform.localScale.z;
         twist.linear.y = -1 * (global.transform.position.z - local.transform.position.z) / global.transform.localScale.z;
         twist.linear.z = -1 * (global.transform.position.y - local.transform.position.y) / global.transform.localScale.y;
@@ -252,6 +267,7 @@ public class RosPublisherExample : MonoBehaviour
         twist.angular.z = (global.transform.rotation.eulerAngles.y - local.transform.rotation.eulerAngles.y) * Mathf.Deg2Rad;*/
 
         ros.Publish(topicName, twist);
+        ros.Publish(topicName8, newTwist);
         //PublishTwist = !PublishTwist;
     }
 

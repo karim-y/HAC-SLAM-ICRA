@@ -131,19 +131,19 @@ public class MinecraftBuilder : MonoBehaviour
         end = direction + start;
         //Debug.Log(end);
         Vector3 startcm = new Vector3(Mathf.RoundToInt(start.x / cubesize) * cubesize, Mathf.RoundToInt(start.y / cubesize) * cubesize, Mathf.RoundToInt(start.z / cubesize) * cubesize);
-
+        //slopes
         float m_in_yx = (end.y - start.y) / (end.x - start.x);
         float m_in_zx = (end.z - start.z) / (end.x - start.x);
         float m_in_yz = (end.y - start.y) / (end.z - start.z);
-
+        //intercepts
         float b_in_yx = start.y - m_in_yx * start.x;
         float b_in_zx = start.z - m_in_zx * start.x;
         float b_in_yz = start.y - m_in_yz * start.z;
-
+        //directions
         int sx = end.x >= start.x ? 1 : -1;
         int sy = end.y >= start.y ? 1 : -1;
         int sz = end.z >= start.z ? 1 : -1;
-
+        //equation of lines
         float tempyx; // = m_in_yx * (end.x + sx * (cubesize / 2)) + b_in_yx;
         float tempzx; // = m_in_zx * (end.x + sx * (cubesize / 2)) + b_in_zx;
         float tempyz;
@@ -220,6 +220,7 @@ public class MinecraftBuilder : MonoBehaviour
         distx_in_cubes = Mathf.RoundToInt(place.x / cubesize);
         disty_in_cubes = Mathf.RoundToInt(place.y / cubesize);
         distz_in_cubes = Mathf.RoundToInt(place.z / cubesize);
+
         if (Mathf.Abs(distx_in_cubes) < xSize / 2 && Mathf.Abs(disty_in_cubes) < ySize / 2 && Mathf.Abs(distz_in_cubes) < zSize / 2)
         {
 
@@ -390,7 +391,6 @@ public class MinecraftBuilder : MonoBehaviour
         }
         pub.PublishDeletedPointCloudMsg();
     }
-
 
 
     ////////This is plan b.

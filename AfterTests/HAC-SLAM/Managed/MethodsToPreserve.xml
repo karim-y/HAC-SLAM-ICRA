@@ -1,0 +1,46 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="FingerPose">
+			<method name="CubeAdder"/>
+			<method name="CubeRemover"/>
+			<method name="editor3D"/>
+			<method name="editor3D"/>
+			<method name="editor3D"/>
+			<method name="editor3D"/>
+		</type>
+		<type fullname="MergedVoxelDisplay">
+			<method name="ShowMergedMap"/>
+		</type>
+		<type fullname="MinecraftBuilder">
+			<method name="DisableMinecraft"/>
+			<method name="EnableMinecraft"/>
+		</type>
+		<type fullname="MiniMap">
+			<method name="Clean"/>
+			<method name="CleanHLMap"/>
+			<method name="ShowLocalMap"/>
+		</type>
+		<type fullname="MiniMapIncoming">
+			<method name="Clean"/>
+			<method name="ShowIncomingMap"/>
+		</type>
+		<type fullname="RosPublisherExample">
+			<method name="EducatedGuessForICP"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Behaviour">
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+		</type>
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+</linker>

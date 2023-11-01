@@ -18,6 +18,7 @@ public class RosSubscriberExample : MonoBehaviour
     private Posemsg odom;
     public uint pcwidth;
     public pc2m incomingPointCloudDownSampled;
+    public pc2m localPointCloudDownSampled;
     public pc2m incomingPointCloudLive;
     public double x, y, z, rx, ry, rz;
     void Start()
@@ -25,6 +26,7 @@ public class RosSubscriberExample : MonoBehaviour
         //ROSConnection.GetOrCreateInstance().Subscribe<RosColor>("color", ColorChange);
         ROSConnection.GetOrCreateInstance().Subscribe<OGGM>("/mapToUnity", Ocupo);
         ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/robot_map_downsampled", pointCloud); // "/map_filtered", pointCloud);
+        ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/local_map_downsampled", localPointCloud);
         ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/aligned_map_pcl", pointCloudLive);
         ROSConnection.GetOrCreateInstance().Subscribe<twist>("/trans_topic_merger", twistReceived);
         //new
@@ -47,7 +49,7 @@ public class RosSubscriberExample : MonoBehaviour
     public void pointCloudLive(pc2m ptcldlive)
     {
         incomingPointCloudLive = ptcldlive;
-        Debug.Log("Ejit");
+        //Debug.Log("Ejit");
     }
     public void twistReceived(twist Twisty)
     {
@@ -76,5 +78,11 @@ public class RosSubscriberExample : MonoBehaviour
         ry = 1 * Twisty.angular.z * Mathf.Rad2Deg;
         rz = 0; // 1 * Twisty.angular.y * Mathf.Rad2Deg; //was -1
 
+    }
+
+    public void localPointCloud(pc2m localptcld)
+    {
+        localPointCloudDownSampled = localptcld;
+        //Debug.Log("Stla2ayna");
     }
 }
