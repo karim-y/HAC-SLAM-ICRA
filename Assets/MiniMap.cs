@@ -80,7 +80,8 @@ public class MiniMap : MonoBehaviour
 
     public void FillLocal(pc2 pointcloud)
     {
-
+        max.Set(0.05f, 0.05f, 0.05f);
+        uint ID = pointcloud.header.stamp.nanosec;
         Vector3 cubePose;
         int j;
         for (int i = 0; i < pointcloud.width - 1; i++)
@@ -98,9 +99,5 @@ public class MiniMap : MonoBehaviour
         }
     }
 
-    /*public void FillLocalUsingObjects(Vector3 pose)
-    {
-
-    }*/
 
 }

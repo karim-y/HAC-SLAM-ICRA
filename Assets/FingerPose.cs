@@ -31,6 +31,7 @@ public class FingerPose : MonoBehaviour
  
     //MixedRealityInputAction selectAction;
     bool EnablePrism;
+    MeshCollider _meshCollider;
     private void Start()
     {
         handJointService = CoreServices.GetInputSystemDataProvider<IMixedRealityHandJointService>();
@@ -41,6 +42,9 @@ public class FingerPose : MonoBehaviour
         doneInstantiation = false;
         testingBool = true;
         cubesizeScale.Set(cubesize, cubesize, cubesize);
+        fingersThreshold = 0.04f;
+        _meshCollider = Prism.GetComponent<MeshCollider>();
+        //_meshCollider.convex = true;  // We need to make this as a kabse later.
     }
 
     public void Update()
@@ -90,9 +94,16 @@ public class FingerPose : MonoBehaviour
                                 //converting units to cubes
                                 FinalPose_incubes.Set(Mathf.RoundToInt(FinalPose.x / cubesize), Mathf.RoundToInt(FinalPose.y / cubesize), Mathf.RoundToInt(FinalPose.z / cubesize));
                                 PrismCenter = (InitialPose_incubes + FinalPose_incubes);
-                                Scale_incubes.x = Mathf.Max(Mathf.Abs((InitialPose_incubes.x - FinalPose_incubes.x) * cubesize) + cubesize, cubesize);
+
+                                //without extra cubesize
+                                Scale_incubes.x = Mathf.Max(Mathf.Abs((InitialPose_incubes.x - FinalPose_incubes.x) * cubesize), cubesize);
+                                Scale_incubes.y = Mathf.Max(Mathf.Abs((InitialPose_incubes.y - FinalPose_incubes.y) * cubesize), cubesize);
+                                Scale_incubes.z = Mathf.Max(Mathf.Abs((InitialPose_incubes.z - FinalPose_incubes.z) * cubesize), cubesize);
+
+                                //with extra cubesize
+                                /*Scale_incubes.x = Mathf.Max(Mathf.Abs((InitialPose_incubes.x - FinalPose_incubes.x) * cubesize) + cubesize, cubesize);
                                 Scale_incubes.y = Mathf.Max(Mathf.Abs((InitialPose_incubes.y - FinalPose_incubes.y) * cubesize) + cubesize, cubesize);
-                                Scale_incubes.z = Mathf.Max(Mathf.Abs((InitialPose_incubes.z - FinalPose_incubes.z) * cubesize) + cubesize, cubesize);
+                                Scale_incubes.z = Mathf.Max(Mathf.Abs((InitialPose_incubes.z - FinalPose_incubes.z) * cubesize) + cubesize, cubesize);*/
                                 //transform selector
                                 Selector.transform.position = PrismCenter * cubesize / 2;
                                 Selector.transform.localScale = Scale_incubes;
@@ -237,7 +248,7 @@ public class FingerPose : MonoBehaviour
     
     public void officialVoxelizer()
     {
-        Debug.Log("voxelize");
+        
         selectorMesh = Selector.GetComponent<Renderer>();
 
         //Rounding of the bounds to units of cubes:
@@ -291,7 +302,7 @@ public class FingerPose : MonoBehaviour
         officialVoxelizer();
         Destroy(Selector);
         appBar.SetActive(false);
-        //doneInstantiation = false;
+        doneInstantiation = false;
     }
 
     public void adjustSelector()

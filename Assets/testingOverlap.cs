@@ -5,8 +5,8 @@ using UnityEngine;
 public class testingOverlap : MonoBehaviour
 {
 
-    Collider[] intersections;
-    
+    public GameObject tester;
+    RaycastHit hit;
 
     // Start is called before the first frame update
     void Start()
@@ -17,17 +17,9 @@ public class testingOverlap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        intersections = Physics.OverlapBox(transform.position, transform.localScale/2);
-        if (intersections != null)
+        /*if(Physics.Raycast(transform.position, Vector3.forward, out hit, 10f))
         {
-            foreach (Collider intersect in intersections)
-            {
-                if(intersect.gameObject.name == "Prism")
-                {
-                    Debug.Log(intersect.gameObject.name);
-                }
-                
-            }
-        }
+            Instantiate(tester, hit.point, Quaternion.identity);
+        }*/
     }
 }

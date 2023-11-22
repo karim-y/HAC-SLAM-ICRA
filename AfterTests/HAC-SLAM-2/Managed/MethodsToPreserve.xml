@@ -1,8 +1,15 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
 		<type fullname="FingerPose">
+			<method name="abortSelector"/>
+			<method name="abortSelector"/>
+			<method name="adjustSelector"/>
+			<method name="adjustSelector"/>
+			<method name="confirmSelector"/>
 			<method name="CubeAdder"/>
 			<method name="CubeRemover"/>
+			<method name="doneSelector"/>
+			<method name="doneSelector"/>
 			<method name="editor3D"/>
 			<method name="editor3D"/>
 			<method name="editor3D"/>
@@ -34,6 +41,22 @@
 			<method name="set_enabled"/>
 		</type>
 		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>

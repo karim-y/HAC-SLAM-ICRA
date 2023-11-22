@@ -49,6 +49,7 @@ public class MergedVoxelDisplay : MonoBehaviour
 
             kuby = Instantiate(cubz, cubePose, Quaternion.identity);
             kuby.transform.SetParent(this.gameObject.transform, false);
+            kuby.gameObject.name = "Voxel";
         }
         //this.transform.rotation = Quaternion.Euler(rx, ry, rz);
         //this.transform.position = new Vector3(x, y, z);

@@ -168,7 +168,7 @@ static const int32_t s_InvokerIndices[47] =
 	7574,
 	7574,
 	7908,
-	11428,
+	11431,
 	7293,
 	7428,
 	7428,
@@ -195,7 +195,7 @@ static const int32_t s_InvokerIndices[47] =
 	6067,
 	5933,
 	7574,
-	11428,
+	11431,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_MixedReality_Toolkit_Extensions_HandPhysics_CodeGenModule;
 const Il2CppCodeGenModule g_Microsoft_MixedReality_Toolkit_Extensions_HandPhysics_CodeGenModule = 

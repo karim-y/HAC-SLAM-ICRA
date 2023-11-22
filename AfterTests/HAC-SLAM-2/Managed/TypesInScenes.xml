@@ -5,6 +5,7 @@
 		<type fullname="FSLAM" preserve="nothing"/>
 		<type fullname="GameReset" preserve="nothing"/>
 		<type fullname="KeyFunction" preserve="nothing"/>
+		<type fullname="LabelerFingerPose" preserve="nothing"/>
 		<type fullname="MergedVoxelDisplay" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Examples.Demos.SolverTrackedTargetType" preserve="nothing"/>
 		<type fullname="MinecraftBuilder" preserve="nothing"/>
@@ -14,6 +15,7 @@
 		<type fullname="RosPublisherExample" preserve="nothing"/>
 		<type fullname="RosSubscriberExample" preserve="nothing"/>
 		<type fullname="SetIPButtonText" preserve="nothing"/>
+		<type fullname="testingOverlap" preserve="nothing"/>
 		<type fullname="TextWriter" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Microsoft.MixedReality.OpenXR">
@@ -83,8 +85,6 @@
 		<type fullname="Microsoft.MixedReality.Toolkit.PhysicalPressEventRouter" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Teleport.ParabolicTeleportPointer" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Teleport.TeleportCursor" preserve="nothing"/>
-		<type fullname="Microsoft.MixedReality.Toolkit.UI.AppBar" preserve="nothing"/>
-		<type fullname="Microsoft.MixedReality.Toolkit.UI.AppBarButton" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.Billboard" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.BoundsControl.BoundsControl" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.BoundsControl.RotationHandlesConfiguration" preserve="nothing"/>

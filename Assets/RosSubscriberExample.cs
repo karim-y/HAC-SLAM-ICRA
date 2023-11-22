@@ -9,6 +9,7 @@ using twist = RosMessageTypes.Geometry.TwistMsg;
 public class RosSubscriberExample : MonoBehaviour
 {
     //public GameObject cube;
+    public RosPublisherExample pub;
     public sbyte[] arr;
     public byte[] pcarr;
     public float resol;
@@ -21,14 +22,19 @@ public class RosSubscriberExample : MonoBehaviour
     public pc2m localPointCloudDownSampled;
     public pc2m incomingPointCloudLive;
     public double x, y, z, rx, ry, rz;
+    public MiniMapIncoming mmincom;
+    public MiniMap miniMap;
+    
     void Start()
     {
         //ROSConnection.GetOrCreateInstance().Subscribe<RosColor>("color", ColorChange);
         ROSConnection.GetOrCreateInstance().Subscribe<OGGM>("/mapToUnity", Ocupo);
-        ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/robot_map_downsampled", pointCloud); // "/map_filtered", pointCloud);
+        ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/robot_map_downsampled", pointCloud); // No need for them anymore
         ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/local_map_downsampled", localPointCloud);
-        ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/aligned_map_pcl", pointCloudLive);
+        ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/com/semantic_pcl", pointCloudLive);
         ROSConnection.GetOrCreateInstance().Subscribe<twist>("/trans_topic_merger", twistReceived);
+        ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/com/downsampled", pointCloudDownsampled);
+
         //new
         //ROSConnection.GetOrCreateInstance().Subscribe<OGGM>("occupancy_map", Ocupo);
 
@@ -49,7 +55,7 @@ public class RosSubscriberExample : MonoBehaviour
     public void pointCloudLive(pc2m ptcldlive)
     {
         incomingPointCloudLive = ptcldlive;
-        //Debug.Log("Ejit");
+        Debug.Log("Ejit");
     }
     public void twistReceived(twist Twisty)
     {
@@ -84,5 +90,21 @@ public class RosSubscriberExample : MonoBehaviour
     {
         localPointCloudDownSampled = localptcld;
         //Debug.Log("Stla2ayna");
+    }
+
+    public void pointCloudDownsampled(pc2m downsampled)
+    {
+        if (downsampled.header.stamp.nanosec == 1)
+        {
+            pub.IDto = (int)downsampled.header.stamp.nanosec;
+            mmincom.Clean();
+            mmincom.FillIncoming(downsampled);
+        }
+        else 
+        {
+            pub.IDfrom = (int)downsampled.header.stamp.nanosec;
+            miniMap.Clean();
+            miniMap.FillLocal(downsampled);
+        }
     }
 }

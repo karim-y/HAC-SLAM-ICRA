@@ -11,8 +11,6 @@ public class MinecraftBuilder : MonoBehaviour
     public GameObject cube, holder, Papa;
     public RosPublisherExample pub;
     public TextWriter txtwrtr;
-    Vector3 tf = new Vector3(0, 0, 0);
-    Vector3 tf2 = new Vector3(5, 5, 5);
     [NonSerialized]
     public float cubesize;
     static int Hor_angle_window = 90; //90; //36
@@ -24,7 +22,6 @@ public class MinecraftBuilder : MonoBehaviour
     Vector3 Ver_Ray_direction;
     //[NonSerialized]
     public GameObject[][][] Taj;
-    public GameObject[][][] Taj1;
     public GameObject parenttest;
     GameObject kube;
     int xSize;
@@ -46,6 +43,16 @@ public class MinecraftBuilder : MonoBehaviour
     float[] grid_arr;
     int indexo;
     bool MappingSwitch;
+
+    List<Vector3> voxelList;
+    List<Byte> byteList;
+    List<float> voxelProba;
+    Collider[] overlaps;
+    Vector3 cubesizeScale;
+    //Dictionary<Vector3, float> voxelProba;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,18 +74,14 @@ public class MinecraftBuilder : MonoBehaviour
             }
         }
 
-        /*Taj1 = new GameObject[xSize / 2][][];
-        for (int i = 0; i < xSize / 2; i++)
-        {
-            Taj1[i] = new GameObject[ySize / 2][];
-            for (int j = 0; j < ySize / 2; j++)
-            {
-                Taj1[i][j] = new GameObject[zSize / 2];
-            }
-        }*/
-
-
         MappingSwitch = true;
+
+        voxelList = new List<Vector3>();
+        byteList = new List<Byte>();
+        voxelProba = new List<float>();
+        cubesizeScale = new Vector3(cubesize - 0.001f, cubesize - 0.001f, cubesize - 0.001f);
+        //voxelProba = new Dictionary<Vector3, float>();
+
     }
 
     // Update is called once per frame
@@ -102,7 +105,7 @@ public class MinecraftBuilder : MonoBehaviour
                     raycastHit = Physics.Raycast(Gaze_position, Ver_Ray_direction, out hit, 10f);
                     if (raycastHit && hit.transform.name.StartsWith("SpatialMesh")) //The second condition ensures that only the spatial mesh is mapped
                     {
-                        txtwrtr.meshName = hit.collider.name;
+                        //txtwrtr.meshName = hit.collider.name;
                         distx_in_cubes = Mathf.RoundToInt(hit.point.x / cubesize);
                         disty_in_cubes = Mathf.RoundToInt(hit.point.y / cubesize);
                         distz_in_cubes = Mathf.RoundToInt(hit.point.z / cubesize);
@@ -117,7 +120,6 @@ public class MinecraftBuilder : MonoBehaviour
             }
         }
     }
-
 
     public void Rasterizer(Vector3 start, Vector3 end)
     {
@@ -234,13 +236,16 @@ public class MinecraftBuilder : MonoBehaviour
             {
                 grid_arr[indexo] = 100;
             }
+
             if (grid_arr[indexo] < 1)
             {
                 grid_arr[indexo] = grid_arr[indexo] + 0.05f;
             }
+
             if (Taj[distx_in_cubes - 1 + xSize / 2][disty_in_cubes - 1 + ySize / 2][distz_in_cubes - 1 + zSize / 2] == null && grid_arr[indexo] >= 0.6f)
             {
                 Taj[distx_in_cubes - 1 + xSize / 2][disty_in_cubes - 1 + ySize / 2][distz_in_cubes - 1 + zSize / 2] = Instantiate(cube, nearest_pt, Quaternion.identity);
+                Taj[distx_in_cubes - 1 + xSize / 2][disty_in_cubes - 1 + ySize / 2][distz_in_cubes - 1 + zSize / 2].gameObject.name = "Voxel";
                 Taj[distx_in_cubes - 1 + xSize / 2][disty_in_cubes - 1 + ySize / 2][distz_in_cubes - 1 + zSize / 2].transform.SetParent(Papa.gameObject.transform);
                 //miniMap.Fill(nearest_pt);
                 
@@ -252,7 +257,7 @@ public class MinecraftBuilder : MonoBehaviour
                 {
                     pub.AddPointCloudtoROSMessage(nearest_pt);
                 }*/
-                //if(Taj1[distx_in_cubes/2])
+                
             }
         }
     }
@@ -320,13 +325,13 @@ public class MinecraftBuilder : MonoBehaviour
     public void DisableMinecraft()
     {
         MappingSwitch = false;
-        Papa.SetActive(false);
+        //Papa.SetActive(false);
     }
 
     public void EnableMinecraft()
     {
         MappingSwitch = true;
-        Papa.SetActive(true);
+        //Papa.SetActive(true);
     }
 
     /*public void DestroyEditor(Vector3Int MaxDist, Vector3Int RecentDist)
@@ -392,6 +397,42 @@ public class MinecraftBuilder : MonoBehaviour
         pub.PublishDeletedPointCloudMsg();
     }
 
+    public void voxelInstantiator(Vector3 point)
+    {
+        if (voxelList.Contains(point))
+        {
+            if (voxelProba[voxelList.IndexOf(point)] < 1)
+            {
+                voxelProba[voxelList.IndexOf(point)] = voxelProba[voxelList.IndexOf(point)] + 0.05f;
+            }
+
+            overlaps = Physics.OverlapBox(point, cubesizeScale / 2);
+            if (overlaps != null)
+            {
+                foreach (Collider overlap in overlaps)
+                {
+                    if (overlap.gameObject.name == "Prism")
+                    {
+
+                        foreach (Collider overlap2 in overlaps)
+                        {
+                            if (overlap2.gameObject.name == "Voxel")
+                            {
+                                overlap2.gameObject.name = "Labeled";
+                                //Destroy(overlap2.gameObject);   //this works
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        else
+        {
+            voxelList.Add(point);
+            voxelProba.Add(0.05f);
+        }
+    }
 
     ////////This is plan b.
     /*public void DestroyEditor(Vector3Int MaxDist, Vector3Int RecentDist)
