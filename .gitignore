@@ -17,6 +17,7 @@
 # Recordings can get excessive in size
 /[Rr]ecordings/
 
+/AfterTests/
 /Yay/
 /Yay1/
 /Yay2/

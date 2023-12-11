@@ -8,6 +8,9 @@ public class FingerPose : MonoBehaviour
     Vector3 InitialPose, FinalPose, PrismCenter, Scale_incubes;
     Vector3Int InitialPose_incubes, FinalPose_incubes;
     public GameObject Prism;
+    public GameObject Prism1;
+    public GameObject Prism2;
+    public GameObject Prism3;
     public GameObject sfiro;
     
     public MinecraftBuilder _MinecraftBuilder;
@@ -315,5 +318,23 @@ public class FingerPose : MonoBehaviour
     {
         Selector.GetComponent<BoxCollider>().enabled = false;
         Selector.GetComponent<BoundsControl>().enabled = false;
+    }
+
+    public void request1()
+    {
+        Prism = Prism1;
+        _meshCollider = Prism1.GetComponent<MeshCollider>();
+    }
+    
+    public void request2()
+    {
+        Prism = Prism2;
+        _meshCollider = Prism2.GetComponent<MeshCollider>();
+    }
+    
+    public void request3()
+    {
+        Prism = Prism3;
+        _meshCollider = Prism3.GetComponent<MeshCollider>();
     }
 }

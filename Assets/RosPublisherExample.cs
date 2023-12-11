@@ -152,17 +152,23 @@ public class RosPublisherExample : MonoBehaviour
         //For labeled point clouds:
         pc2l = new pc2.PointCloud2Msg();
         pc2l.header.frame_id = "map";
+        pc2l.header.stamp.nanosec = 2;
         pc2l.fields = new pc2.PointFieldMsg[]
         {
             new pc2.PointFieldMsg { name = "x", offset = 0, datatype = pc2.PointFieldMsg.FLOAT32, count = 1 },
             new pc2.PointFieldMsg { name = "y", offset = 4, datatype = pc2.PointFieldMsg.FLOAT32, count = 1 },
             new pc2.PointFieldMsg { name = "z", offset = 8, datatype = pc2.PointFieldMsg.FLOAT32, count = 1 },
-            new pc2.PointFieldMsg { name = "proba", offset = 12, datatype = pc2.PointFieldMsg.UINT8, count = 1 },
+            new pc2.PointFieldMsg { name = "r", offset = 12, datatype = pc2.PointFieldMsg.UINT8, count = 1 },
+            new pc2.PointFieldMsg { name = "g", offset = 13, datatype = pc2.PointFieldMsg.UINT8, count = 1 },
+            new pc2.PointFieldMsg { name = "b", offset = 14, datatype = pc2.PointFieldMsg.UINT8, count = 1 },
+            
+            
+            /*new pc2.PointFieldMsg { name = "proba", offset = 12, datatype = pc2.PointFieldMsg.UINT8, count = 1 },
             new pc2.PointFieldMsg { name = "label", offset = 13, datatype = pc2.PointFieldMsg.UINT8, count = 1 },
-            new pc2.PointFieldMsg { name = "instance", offset = 14, datatype = pc2.PointFieldMsg.UINT8, count = 1 },
+            new pc2.PointFieldMsg { name = "instance", offset = 14, datatype = pc2.PointFieldMsg.UINT8, count = 1 },*/
         };
         pc2l.is_bigendian = false;
-        pc2l.point_step = 14;
+        pc2l.point_step = 15;
         pc2l.row_step = pc2e.point_step;
         pc2l.is_dense = true;
         pc2l.width = NewWidthforEdited;

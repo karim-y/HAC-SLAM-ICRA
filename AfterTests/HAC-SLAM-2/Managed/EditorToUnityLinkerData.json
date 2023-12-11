@@ -626,6 +626,13 @@
         {
             "managedAssemblyName": "Microsoft.MixedReality.Toolkit.SDK.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "Microsoft.MixedReality.Toolkit.UI.ToolTip",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Microsoft.MixedReality.Toolkit.SDK.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "Microsoft.MixedReality.Toolkit.UI.ToolTipBackgroundMesh",
             "moduleName": "",
             "usedInScenes": []

@@ -13,6 +13,9 @@ public class MergedVoxelDisplay : MonoBehaviour
     bool once = true;
 
     GameObject kuby;
+
+    public Material SelectedMaterial;
+    MeshRenderer VoxelMeshRenderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +53,13 @@ public class MergedVoxelDisplay : MonoBehaviour
             kuby = Instantiate(cubz, cubePose, Quaternion.identity);
             kuby.transform.SetParent(this.gameObject.transform, false);
             kuby.gameObject.name = "Voxel";
+
+            if (pointcloud.data[j+13] == 77)
+            {
+                VoxelMeshRenderer = kuby.gameObject.GetComponent<MeshRenderer>();
+                VoxelMeshRenderer.material = SelectedMaterial;
+            }
+
         }
         //this.transform.rotation = Quaternion.Euler(rx, ry, rz);
         //this.transform.position = new Vector3(x, y, z);

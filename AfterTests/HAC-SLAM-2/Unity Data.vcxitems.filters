@@ -2,34 +2,34 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Data">
-      <UniqueIdentifier>{44d84dd7-999c-40a6-bfd3-44a5dceeabb2}</UniqueIdentifier>
+      <UniqueIdentifier>{7d76e176-2624-4c13-be04-fdc6fc67f662}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\Resources">
-      <UniqueIdentifier>{bab76b63-1b53-4122-a4bc-afee951810a7}</UniqueIdentifier>
+      <UniqueIdentifier>{3b28d35e-d466-41de-873e-58b8bd396c19}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\il2cpp_data\Metadata">
-      <UniqueIdentifier>{905b2e90-6742-43fd-8805-e1c110fc2bb1}</UniqueIdentifier>
+      <UniqueIdentifier>{b4135d00-b648-4654-9484-4b029ca41074}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\il2cpp_data\Resources">
-      <UniqueIdentifier>{35d5f080-267a-47cc-b66d-0fb23ba962da}</UniqueIdentifier>
+      <UniqueIdentifier>{060fd7a2-6992-4a14-9795-07e73a167eac}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\StreamingAssets\Vuforia">
-      <UniqueIdentifier>{125b794d-f356-4f7f-9616-fc8bdc2072b2}</UniqueIdentifier>
+      <UniqueIdentifier>{a49920f7-9cea-41db-9918-306f6dcd29ee}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\UnitySubsystems\MicrosoftOpenXRPlugin">
-      <UniqueIdentifier>{8a61a2d4-c395-43d7-a636-f5f0c6371b7c}</UniqueIdentifier>
+      <UniqueIdentifier>{c581e54a-3e3f-4159-a280-52147cbf519e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\UnitySubsystems\UnityOpenXR">
-      <UniqueIdentifier>{a78da5ed-2d9a-4fc8-9114-c4400dc5459f}</UniqueIdentifier>
+      <UniqueIdentifier>{c0bd4363-b683-406a-8435-a8e931c6e3d9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\il2cpp_data">
-      <UniqueIdentifier>{0cc33365-081e-4774-8434-cd4c25040dd2}</UniqueIdentifier>
+      <UniqueIdentifier>{30aa3b40-7df2-4177-8fd3-8a05063695a0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\StreamingAssets">
-      <UniqueIdentifier>{e501e3d7-04ba-4b39-a5fd-501994c843d1}</UniqueIdentifier>
+      <UniqueIdentifier>{16cc72f4-a0af-4c19-868d-03436400752e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Data\UnitySubsystems">
-      <UniqueIdentifier>{0712f8d1-cdb5-4927-9a08-fedc3ab18bfe}</UniqueIdentifier>
+      <UniqueIdentifier>{7a269aba-c0f0-48f7-a570-10bdb4c95ef9}</UniqueIdentifier>
     </Filter>
     <Resource Include="$(MSBuildThisFileDirectory)Resource.res" />
     <None Include="$(MSBuildThisFileDirectory)StoreManifest.xml" />
@@ -101,11 +101,11 @@
     <None Include="$(MSBuildThisFileDirectory)Data\UnitySubsystems\UnityOpenXR\UnitySubsystemsManifest.json">
       <Filter>Data\UnitySubsystems\UnityOpenXR</Filter>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)UnityOpenXR.dll" />
-    <None Include="$(MSBuildThisFileDirectory)UnityOpenXR.pdb" />
-    <None Include="$(MSBuildThisFileDirectory)openxr_loader.dll" />
-    <None Include="$(MSBuildThisFileDirectory)openxr_loader.pdb" />
-    <None Include="$(MSBuildThisFileDirectory)MicrosoftOpenXRPlugin.dll" />
-    <None Include="$(MSBuildThisFileDirectory)MicrosoftOpenXRPlugin.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(OutDir)GameAssembly.dll" />
+    <None Include="$(OutDir)GameAssembly.pdb" />
+    <None Include="$(UnityWSAPlayerDir)Players\UAP\il2cpp\$(PlatformTarget)\$(UnityPlayerConfiguration)\baselib.dll" />
+    <None Include="$(UnityWSAPlayerDir)Players\UAP\il2cpp\$(PlatformTarget)\$(UnityPlayerConfiguration)\baselib_UAP_$(PlatformTarget)_$(UnityPlayerConfiguration)_il2cpp.pdb" />
   </ItemGroup>
 </Project>

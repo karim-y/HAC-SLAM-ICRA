@@ -14,6 +14,12 @@
 			<method name="editor3D"/>
 			<method name="editor3D"/>
 			<method name="editor3D"/>
+			<method name="request1"/>
+			<method name="request2"/>
+			<method name="request3"/>
+		</type>
+		<type fullname="LabelerFingerPose">
+			<method name="labelVoxelizer"/>
 		</type>
 		<type fullname="MergedVoxelDisplay">
 			<method name="ShowMergedMap"/>
@@ -21,18 +27,20 @@
 		<type fullname="MinecraftBuilder">
 			<method name="DisableMinecraft"/>
 			<method name="EnableMinecraft"/>
+			<method name="EnableMinecraft"/>
 		</type>
 		<type fullname="MiniMap">
 			<method name="Clean"/>
 			<method name="CleanHLMap"/>
-			<method name="ShowLocalMap"/>
 		</type>
 		<type fullname="MiniMapIncoming">
 			<method name="Clean"/>
-			<method name="ShowIncomingMap"/>
 		</type>
 		<type fullname="RosPublisherExample">
 			<method name="EducatedGuessForICP"/>
+			<method name="PublishRequest3"/>
+			<method name="PublishRequest3"/>
+			<method name="PublishRequest3"/>
 		</type>
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">

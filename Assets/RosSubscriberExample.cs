@@ -34,6 +34,8 @@ public class RosSubscriberExample : MonoBehaviour
         ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/com/semantic_pcl", pointCloudLive);
         ROSConnection.GetOrCreateInstance().Subscribe<twist>("/trans_topic_merger", twistReceived);
         ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/com/downsampled", pointCloudDownsampled);
+        ROSConnection.GetOrCreateInstance().Subscribe<pc2m>("/human/human_label", pointCloudDownsampledTest);
+        
 
         //new
         //ROSConnection.GetOrCreateInstance().Subscribe<OGGM>("occupancy_map", Ocupo);
@@ -106,5 +108,10 @@ public class RosSubscriberExample : MonoBehaviour
             miniMap.Clean();
             miniMap.FillLocal(downsampled);
         }
+    }
+    public void pointCloudDownsampledTest(pc2m label)
+    {
+        Debug.Log(label.data.Length);
+        Debug.Log(label.data[13]+" "+label.data[14]);
     }
 }

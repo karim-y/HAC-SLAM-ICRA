@@ -102,6 +102,7 @@
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.SpeechConfirmationTooltip" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.States" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.Theme" preserve="nothing"/>
+		<type fullname="Microsoft.MixedReality.Toolkit.UI.ToolTip" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.ToolTipBackgroundMesh" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.ToolTipConnector" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.ToolTipLineHighlight" preserve="nothing"/>

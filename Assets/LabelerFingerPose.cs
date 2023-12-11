@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.MixedReality.Toolkit.Input;
+using Microsoft.MixedReality.Toolkit.UI;
 
 public class LabelerFingerPose : MonoBehaviour
 {
@@ -15,10 +16,11 @@ public class LabelerFingerPose : MonoBehaviour
     public MinecraftBuilder _minecraftbuilder;
     public RosPublisherExample Pub;
     GameObject Selector;
-    public GameObject appBar, Prism;
+    public GameObject appBar, Prism, tooltip;
     MeshCollider _meshCollider;
     Renderer selectorMesh;
     Collider[] overlaps;
+    ToolTip tooltipText;
     int counter;
     public Material SelectedMaterial;
     MeshRenderer VoxelMeshRenderer;
@@ -34,7 +36,7 @@ public class LabelerFingerPose : MonoBehaviour
         counter = 0;
         labelerOn = true;
         doneInstantiation = false;
-        
+        tooltipText = tooltip.GetComponent<ToolTip>();
     }
 
     // Update is called once per frame
@@ -184,7 +186,8 @@ public class LabelerFingerPose : MonoBehaviour
                                         VoxelMeshRenderer = overlap2.gameObject.GetComponent<MeshRenderer>();
                                         VoxelMeshRenderer.material = SelectedMaterial;
                                         overlap2.gameObject.name = "Labeled";
-                                        Pub.LabeledPointCloudPopulater(overlap2.gameObject.transform.position, 1, 2);
+                                        Pub.LabeledPointCloudPopulater(overlap2.gameObject.transform.position, 77 , 66);
+                                        break;
                                         //Destroy(overlap2.gameObject);   //this works
                                     }
                                 }
@@ -195,7 +198,11 @@ public class LabelerFingerPose : MonoBehaviour
             }
         }
         
+        
+        tooltipText.ToolTipText = "Chair";
+        Instantiate(tooltip, Selector.transform.position + new Vector3(0, (Selector.transform.localScale.y)/2,0), Quaternion.identity);
         Destroy(Selector);
         Pub.LabelPublisher();
+        
     }
 }

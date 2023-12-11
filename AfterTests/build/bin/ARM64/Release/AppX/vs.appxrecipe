@@ -29,13 +29,13 @@
     <AppXManifest Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-01T12:36:37.445</Modified>
+      <Modified>2023-12-10T12:41:57.619</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\HAC-SLAM-2.exe">
       <PackagePath>HAC-SLAM-2.exe</PackagePath>
-      <Modified>2023-11-01T12:36:36.377</Modified>
+      <Modified>2023-12-10T12:41:56.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\il2cpp\ARM64\Release\UnityPlayer.winmd">
       <PackagePath>UnityPlayer.winmd</PackagePath>
@@ -86,7 +86,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\StoreManifest.xml">
       <PackagePath>StoreManifest.xml</PackagePath>
-      <Modified>2023-11-01T12:34:12.666</Modified>
+      <Modified>2023-12-10T12:39:09.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\StreamingAssets\Vuforia\Hiro.xml">
       <PackagePath>Data\StreamingAssets\Vuforia\Hiro.xml</PackagePath>
@@ -94,15 +94,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\boot.config">
       <PackagePath>Data\boot.config</PackagePath>
-      <Modified>2023-11-01T12:34:09.236</Modified>
+      <Modified>2023-12-10T12:39:05.026</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\globalgamemanagers">
       <PackagePath>Data\globalgamemanagers</PackagePath>
-      <Modified>2023-11-01T12:34:03.210</Modified>
+      <Modified>2023-12-10T12:39:02.919</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\level0">
       <PackagePath>Data\level0</PackagePath>
-      <Modified>2023-11-01T12:34:00.738</Modified>
+      <Modified>2023-12-10T12:39:00.233</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\Resources\unity default resources">
       <PackagePath>Data\Resources\unity default resources</PackagePath>
@@ -110,43 +110,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\Resources\unity_builtin_extra">
       <PackagePath>Data\Resources\unity_builtin_extra</PackagePath>
-      <Modified>2023-11-01T12:34:09.233</Modified>
+      <Modified>2023-12-10T12:39:05.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\globalgamemanagers.assets">
       <PackagePath>Data\globalgamemanagers.assets</PackagePath>
-      <Modified>2023-11-01T12:34:03.326</Modified>
+      <Modified>2023-12-10T12:39:03.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\resources.assets">
       <PackagePath>Data\resources.assets</PackagePath>
-      <Modified>2023-11-01T12:34:03.356</Modified>
+      <Modified>2023-12-10T12:39:03.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\sharedassets0.assets">
       <PackagePath>Data\sharedassets0.assets</PackagePath>
-      <Modified>2023-11-01T12:34:08.315</Modified>
+      <Modified>2023-12-10T12:39:04.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\level0.resS">
       <PackagePath>Data\level0.resS</PackagePath>
-      <Modified>2023-11-01T12:34:00.730</Modified>
+      <Modified>2023-12-10T12:39:00.220</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\resources.assets.resS">
       <PackagePath>Data\resources.assets.resS</PackagePath>
-      <Modified>2023-11-01T12:34:03.355</Modified>
+      <Modified>2023-12-10T12:39:03.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\sharedassets0.assets.resS">
       <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
-      <Modified>2023-11-01T12:34:08.269</Modified>
+      <Modified>2023-12-10T12:39:04.595</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\nativePlugins.txt">
       <PackagePath>Data\nativePlugins.txt</PackagePath>
-      <Modified>2023-11-01T12:34:48.474</Modified>
+      <Modified>2023-12-10T12:39:58.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\RuntimeInitializeOnLoads.json">
       <PackagePath>Data\RuntimeInitializeOnLoads.json</PackagePath>
-      <Modified>2023-11-01T12:33:59.011</Modified>
+      <Modified>2023-12-10T12:38:58.195</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\ScriptingAssemblies.json">
       <PackagePath>Data\ScriptingAssemblies.json</PackagePath>
-      <Modified>2023-11-01T12:34:02.984</Modified>
+      <Modified>2023-12-10T12:39:02.696</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\UnitySubsystems\MicrosoftOpenXRPlugin\UnitySubsystemsManifest.json">
       <PackagePath>Data\UnitySubsystems\MicrosoftOpenXRPlugin\UnitySubsystemsManifest.json</PackagePath>
@@ -158,19 +158,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\sharedassets0.resource">
       <PackagePath>Data\sharedassets0.resource</PackagePath>
-      <Modified>2023-11-01T12:34:08.230</Modified>
+      <Modified>2023-12-10T12:39:04.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\il2cpp_data\Metadata\global-metadata.dat">
       <PackagePath>Data\il2cpp_data\Metadata\global-metadata.dat</PackagePath>
-      <Modified>2023-11-01T12:34:34.887</Modified>
+      <Modified>2023-12-10T12:39:34.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\il2cpp_data\Resources\I18N.CJK.dll-resources.dat">
       <PackagePath>Data\il2cpp_data\Resources\I18N.CJK.dll-resources.dat</PackagePath>
-      <Modified>2023-11-01T12:34:28.128</Modified>
+      <Modified>2023-12-10T12:39:26.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\il2cpp_data\Resources\mscorlib.dll-resources.dat">
       <PackagePath>Data\il2cpp_data\Resources\mscorlib.dll-resources.dat</PackagePath>
-      <Modified>2023-11-01T12:34:28.127</Modified>
+      <Modified>2023-12-10T12:39:26.539</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\HAC-SLAM-2\Data\StreamingAssets\Vuforia\Hiro.dat">
       <PackagePath>Data\StreamingAssets\Vuforia\Hiro.dat</PackagePath>
@@ -190,7 +190,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\GameAssembly.dll">
       <PackagePath>GameAssembly.dll</PackagePath>
-      <Modified>2023-11-01T12:36:31.696</Modified>
+      <Modified>2023-12-10T12:41:49.661</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\il2cpp\ARM64\Release\baselib.dll">
       <PackagePath>baselib.dll</PackagePath>
@@ -198,7 +198,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\HAC-SLAM\AfterTests\build\bin\ARM64\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-01T12:36:37.193</Modified>
+      <Modified>2023-12-10T12:41:57.344</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
