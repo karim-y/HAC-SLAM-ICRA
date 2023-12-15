@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.Robotics.ROSTCPConnector;
-using Microsoft.MixedReality.Toolkit.UI; 
+using Microsoft.MixedReality.Toolkit.UI;
 
 public class SetIPButtonText : MonoBehaviour
 {
